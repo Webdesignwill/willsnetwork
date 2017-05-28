@@ -111,6 +111,8 @@ class Base(WillsNetworkMixin, Configuration):
     def STATIC_ROOT(self):
         return os.path.join(self.BASE_DIR, 'static')
 
+    STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
     STATIC_URL = '/static/'
     FAVICON_PATH = STATIC_URL + 'images/favicon.png'
 
