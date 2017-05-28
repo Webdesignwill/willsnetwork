@@ -9,5 +9,16 @@
   </head>
   <body>
       <img src="{% static '/img/robots.gif' %}" />
+      <!-- renders a csrf-token, needed for API -->
+      {% csrf_token %}
+
+      <pre>
+        {% url 'rest_api:contact-list' version='1.0' %}
+
+      method POST
+      fields: email, message
+      + csrf_token
+      </pre>
+
   </body>
 </html>
