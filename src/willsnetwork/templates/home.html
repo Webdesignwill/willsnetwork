@@ -4,11 +4,11 @@
   <head>
     <title>WillsNetwork</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link href="{% static '/css/styles.css' %}" rel="stylesheet" />
-    <script type="text/javascript" src="{% static '/js/base.js' %}"></script>
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    <script type="text/javascript" src="{% static 'js/base.js' %}"></script>
   </head>
   <body>
-      <img src="{% static '/img/robots.gif' %}" />
+      <img src="{% static 'img/robots.gif' %}" />
       <!-- renders a csrf-token, needed for API -->
       {% csrf_token %}
 
