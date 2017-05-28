@@ -4,3 +4,4 @@ djangorestframework==3.6.3
 dj-database-url==0.4.2
 django-configurations==2.0
 gunicorn==19.7.1
+envparse==0.2.0
