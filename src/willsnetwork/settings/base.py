@@ -27,7 +27,8 @@ class Base(WillsNetworkMixin, Configuration):
     """
 
     # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    BASE_DIR = os.path.abspath(os.path.dirname(os.path.dirname(
+        os.path.dirname(os.path.dirname(__file__)))))
 
     @property
     def SECRET_KEY(self):
@@ -103,6 +104,12 @@ class Base(WillsNetworkMixin, Configuration):
     USE_I18N = True
     USE_L10N = True
     USE_TZ = True
+
+    STATIC_URL = '/static/'
+
+    @property
+    def STATIC_ROOT(self):
+        return os.path.join(self.BASE_DIR, 'static')
 
     STATIC_URL = '/static/'
     FAVICON_PATH = STATIC_URL + 'images/favicon.png'
