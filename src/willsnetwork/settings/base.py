@@ -53,6 +53,7 @@ class Base(WillsNetworkMixin, Configuration):
         'accounts',
         'willsnetwork',
         'rest_api',
+        'contacts',
     ]
 
     MIDDLEWARE = [
@@ -135,6 +136,5 @@ class Base(WillsNetworkMixin, Configuration):
             'rest_framework.authentication.SessionAuthentication',
             'rest_framework.authentication.TokenAuthentication',
         ),
-        'DEFAULT_PAGINATION_CLASS': 'project.pagination.CustomPagination',
         'PAGE_SIZE': 10,
     }
