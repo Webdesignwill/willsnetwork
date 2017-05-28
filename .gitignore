@@ -1,0 +1,7 @@
+*.pyc
+*.DS_Store
+/static/
+src/.cache/
+local.py
+src/htmlcov/
+*.coverage
